@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Irfana 🎉</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            text-align: center;
+            color: #fff;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        h1 {
+            font-size: 3em;
+            animation: glow 2s infinite alternate;
+        }
+        img {
+            width: 250px;
+            border-radius: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #fff; }
+            to { text-shadow: 0 0 30px #ff4081; }
+        }
+
+        .message-box {
+            margin: 40px auto;
+            width: 80%;
+            max-width: 700px;
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            text-align: left;
+            line-height: 1.6;
+            font-size: 1.1em;
+            min-height: 200px;
+        }
+
+        .cake {
+            font-size: 60px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎉 Happy Birthday Irfana 🎉</h1>
+
+    <img src="irfana.jpg" alt="Irfana Photo">
+
+    <div class="cake">🎂</div>
+
+    <div class="message-box" id="message"></div>
+</div>
+
+<!-- 🔊 AUTOPLAY MUSIC -->
+<audio autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const text = `Happy Birthday, Ponuoo! ❤️
+
+It’s your 19th birthday 🎉 — the perfect time to move forward toward your future. Never mind the past; just do what you believe is right. Life is all about you and your journey.
+
+You’ve lived 6,940 days in this world, and 844 of those days have been with me — and those are the most special ones to me. With my small brain, I can still say with full confidence that you will become a Merchant Navy officer and succeed in your life.
+
+Today is your day — only yours — to celebrate and enjoy the greatness of this beautiful moment. I feel like today is something truly special… like a glory has come to earth — especially my living angel.
+
+Kunjuoo, you are the only person I love the most, and the only one I give my full respect and care. I love you so much because of your goodness.
+
+I am yours, Ponuoo 💖
+
+Wishing you many, many happy returns of the day 🫂🫂🫂🫂🫂🫂🫂🫂🫂🫂
+
+— By your Kaaku ❤️`;
+
+let i = 0;
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("message").innerHTML += text.charAt(i) === "\n" ? "<br>" : text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 25);
+    }
+}
+typeWriter();
+</script>
+
+</body>
+</html>
